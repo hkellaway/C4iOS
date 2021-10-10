@@ -31,14 +31,16 @@ public class Camera: View {
     public var quality = AVCaptureSession.Preset.photo
     public var position = CameraPosition.front
 
-    var imageOutput: AVCaptureStillImageOutput?
+    var imageOutput: AVCapturePhotoOutput?
     var captureDevice: AVCaptureDevice?
     var previewView: CameraView?
     var input: AVCaptureDeviceInput?
-    var stillImageOutput: AVCaptureStillImageOutput?
+    var stillImageOutput: AVCapturePhotoOutput?
     var captureSession: AVCaptureSession?
     var didCaptureAction: (() -> Void)?
     var orientationObserver: Any?
+    
+    private var isCapturingStillImage: Bool = false
 
     class CameraView: UIView {
         var previewLayer: PreviewLayer {
@@ -133,8 +135,7 @@ public class Camera: View {
 
     func initializeOutput(_ device: AVCaptureDevice) {
         if stillImageOutput == nil {
-            stillImageOutput = AVCaptureStillImageOutput()
-            stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+            stillImageOutput = AVCapturePhotoOutput()
         }
     }
 
@@ -159,7 +160,7 @@ public class Camera: View {
     }
 
     public func captureImage() {
-        guard stillImageOutput?.isCapturingStillImage == false else {
+        guard self.isCapturingStillImage == false else {
             print("Still capturing, please wait until I'm done until you put me to work again")
             return
         }
@@ -170,20 +171,10 @@ public class Camera: View {
 
         updateOrientation()
         connection.videoOrientation = previewLayer.connection!.videoOrientation
-
-        stillImageOutput?.captureStillImageAsynchronously(from: connection) { imageSampleBuffer, _ in
-            guard imageSampleBuffer != nil else {
-                print("Couldn't capture image from still image output")
-                return
-            }
-
-            let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageSampleBuffer! as CMSampleBuffer)
-
-            if let img = UIImage(data: data!) {
-                self.capturedImage = Image(uiimage: self.orientRawImage(img))
-                self.didCaptureAction?()
-            }
-        }
+        
+        let settings = AVCapturePhotoSettings()
+        settings.livePhotoVideoCodecType = .jpeg
+        stillImageOutput?.capturePhoto(with: settings, delegate: self)
     }
 
     func orientRawImage(_ image: UIImage) -> UIImage {
@@ -214,4 +205,23 @@ public class Camera: View {
 
 class PreviewLayer: AVCaptureVideoPreviewLayer {
 
+}
+
+// MARK: - AVCapturePhotoCaptureDelegate
+
+extension Camera: AVCapturePhotoCaptureDelegate {
+    
+    public func photoOutput(_ output: AVCapturePhotoOutput, willBeginCaptureFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        isCapturingStillImage = true
+    }
+    
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        isCapturingStillImage = false
+
+        if let img = UIImage(data: photo.fileDataRepresentation()!) {
+            self.capturedImage = Image(uiimage: self.orientRawImage(img))
+            self.didCaptureAction?()
+        }
+    }
+    
 }
