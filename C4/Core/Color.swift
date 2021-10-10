@@ -334,7 +334,7 @@ public class Color {
 
 // MARK: - Casting to UIColor and CIColor
 
-public extension UIColor {
+extension UIColor {
     /// Initializes a UIColor object from a Color object.
     /// - parameter color: The C4 color object.
     public convenience init?(_ color: Color) {
@@ -342,7 +342,7 @@ public extension UIColor {
     }
 }
 
-public extension CIColor {
+extension CIColor {
     /// Initializes a CIColor object from a Color object.
     /// - parameter color: The C4 color object.
     public convenience init(_ color: Color) {

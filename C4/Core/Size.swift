@@ -167,7 +167,7 @@ public func <= (lhs: Size, rhs: Size) -> Bool {
 }
 
 // MARK: - Casting to CGSize
-public extension CGSize {
+extension CGSize {
     /// Initializes a new CGSize from a Size
     public init(_ size: Size) {
         self.init(width: CGFloat(size.width), height: CGFloat(size.height))

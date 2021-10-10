@@ -185,7 +185,7 @@ public func lerp(_ a: Point, _ b: Point, at: Double) -> Point {
     return a + (b - a) * at
 }
 
-public extension CGPoint {
+extension CGPoint {
     ///Initializes a CGPoint from a Point
     public init(_ point: Point) {
         self.init(x: CGFloat(point.x), y: CGFloat(point.y))

@@ -19,7 +19,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     /// Create an image with a solid color.
     ///
     /// - parameter color: The color to use when creating the image.

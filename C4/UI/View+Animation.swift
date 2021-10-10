@@ -21,7 +21,7 @@ import QuartzCore
 import UIKit
 
 /// Extension to View that handles animating of basic properties.
-public extension View {
+extension View {
     /// Internal function for creating a basic animation and applying that to the receiver.
     /// - parameter keyPath: The identifier to animate
     /// - parameter toValue: The value to which the identifier will be animated

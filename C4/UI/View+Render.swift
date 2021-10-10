@@ -19,7 +19,7 @@
 
 import UIKit
 
-public extension View {
+extension View {
     /// Creates a flattened image of the receiver and its subviews / layers.
     /// - returns: A new Image
     @objc public func render() -> Image? {
@@ -36,7 +36,7 @@ public extension View {
     }
 }
 
-public extension Shape {
+extension Shape {
     /// Creates a flattened image of the receiver and its subviews / layers.
     /// This override takes into consideration the lineWidth of the receiver.
     /// - returns: A new Image

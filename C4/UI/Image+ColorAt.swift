@@ -20,7 +20,7 @@
 import Foundation
 import CoreGraphics
 
-public extension Image {
+extension Image {
     ///  Initializes and returns a new cgimage from the color at a specified point in the receiver.
     ///  ````
     ///  let image = cgimage(at: CGPoint())

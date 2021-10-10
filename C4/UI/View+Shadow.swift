@@ -62,7 +62,7 @@ public struct Shadow {
 }
 
 /// Extension to View that adds a shadow property.
-public extension View {
+extension View {
 
     /// Returns a struct that represents the current visible state of the receiver's shadow. Animatable.
     ///

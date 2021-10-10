@@ -44,7 +44,7 @@ public struct Border {
 }
 
 /// Extension to View that adds a border property.
-public extension View {
+extension View {
     /// Returns a struct that represents the current visible state of the receiver's border. Animatable.
     ///
     /// ````
