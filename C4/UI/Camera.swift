@@ -24,6 +24,17 @@ public enum CameraPosition: Int {
     case unspecified = 0
     case back
     case front
+    
+    func toAV() -> AVCaptureDevice.Position {
+        switch self {
+        case .front:
+            return .front
+        case .back:
+            return .back
+        case .unspecified:
+            return .unspecified
+        }
+    }
 }
 
 public class Camera: View {
@@ -102,7 +113,12 @@ public class Camera: View {
     }
 
     func captureDevice(_ position: CameraPosition) -> AVCaptureDevice? {
-        return AVCaptureDevice.devices(for: AVMediaType.video).first(where: { $0.position.rawValue == position.rawValue })
+        let discoverySession: AVCaptureDevice.DiscoverySession? = self.captureDevice.flatMap {
+            .init(deviceTypes: [$0.deviceType],
+                  mediaType: .video,
+                  position: position.toAV())
+        }
+        return discoverySession?.devices.first
     }
 
     func updateOrientation() {
@@ -110,7 +126,7 @@ public class Camera: View {
             return
         }
 
-        switch UIApplication.shared.statusBarOrientation {
+        switch (UIApplication.shared.windows.first?.windowScene?.interfaceOrientation ?? .portrait) {
         case .portraitUpsideDown:
             connection.videoOrientation = .portraitUpsideDown
         case .landscapeLeft:
@@ -194,6 +210,8 @@ public class Camera: View {
             orientation = shouldFlip ? .leftMirrored : .right
         case .portraitUpsideDown:
             orientation = shouldFlip ? .rightMirrored : .left
+        @unknown default:
+            fatalError("Unexpected case for videoOrientation.")
         }
         return UIImage(cgImage: cgimg, scale: image.scale, orientation: orientation)
     }

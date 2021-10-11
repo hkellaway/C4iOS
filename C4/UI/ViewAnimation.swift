@@ -158,10 +158,12 @@ public class ViewAnimation: Animation {
     }
 
     private func animationBlock() {
-        ViewAnimation.stack.append(self)
-        UIView.setAnimationRepeatCount(Float(self.repeatCount))
-        self.doInTransaction(action: self.animations)
-        ViewAnimation.stack.removeLast()
+        UIView.modifyAnimations(withRepeatCount: CGFloat(self.repeatCount), autoreverses:
+                                    self.autoreverses) {
+            ViewAnimation.stack.append(self)
+            self.doInTransaction(action: self.animations)
+            ViewAnimation.stack.removeLast()
+        }
     }
 
     private func doInTransaction(action: () -> Void) {

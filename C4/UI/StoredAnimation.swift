@@ -55,19 +55,21 @@ public class StoredAnimation: Animation {
         repeatCount > 0 ? options.formUnion(.repeat) : options.subtract(.repeat)
 
         UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
-            ViewAnimation.stack.append(self)
-            UIView.setAnimationRepeatCount(Float(self.repeatCount))
-            CATransaction.begin()
-            CATransaction.setAnimationDuration(self.duration)
-            CATransaction.setAnimationTimingFunction(timing)
-            CATransaction.setCompletionBlock({
-                self.postCompletedEvent()
-            })
-            for (key, value) in self.values {
-                object.setValue(value, forKeyPath: key)
+            UIView.modifyAnimations(withRepeatCount: CGFloat(self.repeatCount),
+                                    autoreverses: self.autoreverses) {
+                ViewAnimation.stack.append(self)
+                CATransaction.begin()
+                CATransaction.setAnimationDuration(self.duration)
+                CATransaction.setAnimationTimingFunction(timing)
+                CATransaction.setCompletionBlock({
+                    self.postCompletedEvent()
+                })
+                for (key, value) in self.values {
+                    object.setValue(value, forKeyPath: key)
+                }
+                CATransaction.commit()
+                ViewAnimation.stack.removeLast()
             }
-            CATransaction.commit()
-            ViewAnimation.stack.removeLast()
         }, completion: nil)
         ShapeLayer.disableActions = disable
     }
