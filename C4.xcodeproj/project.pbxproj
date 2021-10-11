@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F40C6FB1C82ADF0004AE1E7 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40C6FA1C82ADF0004AE1E7 /* Camera.swift */; };
 		1F754DCB1C48EE600036D39F /* ImageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F754DCA1C48EE600036D39F /* ImageLayer.swift */; };
-		1F75FDEB1C5B1FE700EB62C2 /* C4Loop.aif in Resources */ = {isa = PBXBuildFile; fileRef = 1F75FDE81C5B1FE700EB62C2 /* C4Loop.aif */; };
-		1F75FDEC1C5B1FE700EB62C2 /* halo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1F75FDE91C5B1FE700EB62C2 /* halo.mp4 */; };
-		1F75FDED1C5B1FE700EB62C2 /* haloGray.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1F75FDEA1C5B1FE700EB62C2 /* haloGray.mp4 */; };
 		1F75FE951C5CADBF00EB62C2 /* ScreenRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F75FE941C5CADBF00EB62C2 /* ScreenRecorder.swift */; };
 		1FAB35E81C5372CE00620741 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB35E71C5372CE00620741 /* Pixel.swift */; };
 		1FAB35EA1C53745300620741 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB35E91C53745300620741 /* Layer.swift */; };
@@ -138,9 +135,6 @@
 /* Begin PBXFileReference section */
 		1F40C6FA1C82ADF0004AE1E7 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		1F754DCA1C48EE600036D39F /* ImageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLayer.swift; sourceTree = "<group>"; };
-		1F75FDE81C5B1FE700EB62C2 /* C4Loop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = C4Loop.aif; sourceTree = "<group>"; };
-		1F75FDE91C5B1FE700EB62C2 /* halo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = halo.mp4; sourceTree = "<group>"; };
-		1F75FDEA1C5B1FE700EB62C2 /* haloGray.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = haloGray.mp4; sourceTree = "<group>"; };
 		1F75FE941C5CADBF00EB62C2 /* ScreenRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecorder.swift; sourceTree = "<group>"; };
 		1FAB35E71C5372CE00620741 /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		1FAB35E91C53745300620741 /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
@@ -304,9 +298,6 @@
 				A96F505E1B5385A5002B3A46 /* AppDelegate.swift */,
 				A96F50601B5385A5002B3A46 /* ViewController.swift */,
 				A96F50621B5385A5002B3A46 /* Main.storyboard */,
-				1F75FDE81C5B1FE700EB62C2 /* C4Loop.aif */,
-				1F75FDE91C5B1FE700EB62C2 /* halo.mp4 */,
-				1F75FDEA1C5B1FE700EB62C2 /* haloGray.mp4 */,
 				A96F50651B5385A5002B3A46 /* Images.xcassets */,
 				A96F50671B5385A5002B3A46 /* LaunchScreen.xib */,
 				A96F505C1B5385A5002B3A46 /* Supporting Files */,
@@ -564,10 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96F50641B5385A5002B3A46 /* Main.storyboard in Resources */,
-				1F75FDEB1C5B1FE700EB62C2 /* C4Loop.aif in Resources */,
-				1F75FDED1C5B1FE700EB62C2 /* haloGray.mp4 in Resources */,
 				A96F50691B5385A5002B3A46 /* LaunchScreen.xib in Resources */,
-				1F75FDEC1C5B1FE700EB62C2 /* halo.mp4 in Resources */,
 				A96F50661B5385A5002B3A46 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
