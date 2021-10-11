@@ -160,7 +160,7 @@
 		A9596D411A054B4F0023323D /* MathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTests.swift; sourceTree = "<group>"; };
 		A9596D421A054B4F0023323D /* PointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointTests.swift; sourceTree = "<group>"; };
 		A9596D431A054B4F0023323D /* VectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTests.swift; sourceTree = "<group>"; };
-		A96F505A1B5385A5002B3A46 /* C4App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96F505A1B5385A5002B3A46 /* C4DummyAppTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4DummyAppTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F505D1B5385A5002B3A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96F505E1B5385A5002B3A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96F50601B5385A5002B3A46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 			children = (
 				614F824319DB5ED3001DF1D4 /* C4.framework */,
 				614F824E19DB5ED4001DF1D4 /* C4Tests-iOS.xctest */,
-				A96F505A1B5385A5002B3A46 /* C4App.app */,
+				A96F505A1B5385A5002B3A46 /* C4DummyAppTestHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -477,9 +477,9 @@
 			productReference = 614F824E19DB5ED4001DF1D4 /* C4Tests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A96F50591B5385A5002B3A46 /* C4App */ = {
+		A96F50591B5385A5002B3A46 /* C4DummyAppTestHost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A96F50761B5385A5002B3A46 /* Build configuration list for PBXNativeTarget "C4App" */;
+			buildConfigurationList = A96F50761B5385A5002B3A46 /* Build configuration list for PBXNativeTarget "C4DummyAppTestHost" */;
 			buildPhases = (
 				A96F50561B5385A5002B3A46 /* Sources */,
 				A96F50571B5385A5002B3A46 /* Frameworks */,
@@ -491,9 +491,9 @@
 			dependencies = (
 				A96F50811B538650002B3A46 /* PBXTargetDependency */,
 			);
-			name = C4App;
+			name = C4DummyAppTestHost;
 			productName = C4App;
-			productReference = A96F505A1B5385A5002B3A46 /* C4App.app */;
+			productReference = A96F505A1B5385A5002B3A46 /* C4DummyAppTestHost.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -539,7 +539,7 @@
 			targets = (
 				614F824219DB5ED3001DF1D4 /* C4-iOS */,
 				614F824D19DB5ED4001DF1D4 /* C4Tests-iOS */,
-				A96F50591B5385A5002B3A46 /* C4App */,
+				A96F50591B5385A5002B3A46 /* C4DummyAppTestHost */,
 			);
 		};
 /* End PBXProject section */
@@ -702,7 +702,7 @@
 		};
 		A96F507D1B5385AF002B3A46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A96F50591B5385A5002B3A46 /* C4App */;
+			target = A96F50591B5385A5002B3A46 /* C4DummyAppTestHost */;
 			targetProxy = A96F507C1B5385AF002B3A46 /* PBXContainerItemProxy */;
 		};
 		A96F50811B538650002B3A46 /* PBXTargetDependency */ = {
@@ -899,7 +899,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c4ios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C4App.app/C4App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C4DummyAppTestHost.app/C4DummyAppTestHost";
 			};
 			name = Debug;
 		};
@@ -913,7 +913,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C4App.app/C4App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C4DummyAppTestHost.app/C4DummyAppTestHost";
 			};
 			name = Release;
 		};
@@ -981,7 +981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A96F50761B5385A5002B3A46 /* Build configuration list for PBXNativeTarget "C4App" */ = {
+		A96F50761B5385A5002B3A46 /* Build configuration list for PBXNativeTarget "C4DummyAppTestHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A96F50771B5385A5002B3A46 /* Debug */,
