@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A94E3BD419E0E9390039A9C4 /* C4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4.framework */; };
+		A94E3BD419E0E9390039A9C4 /* C4rk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4rk.framework */; };
 		A96F505F1B5385A5002B3A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F505E1B5385A5002B3A46 /* AppDelegate.swift */; };
 		A96F50611B5385A5002B3A46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96F50601B5385A5002B3A46 /* ViewController.swift */; };
 		A96F50641B5385A5002B3A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96F50621B5385A5002B3A46 /* Main.storyboard */; };
 		A96F50661B5385A5002B3A46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96F50651B5385A5002B3A46 /* Images.xcassets */; };
 		A96F50691B5385A5002B3A46 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96F50671B5385A5002B3A46 /* LaunchScreen.xib */; };
-		A96F507E1B538650002B3A46 /* C4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4.framework */; };
-		A96F507F1B538650002B3A46 /* C4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A96F507E1B538650002B3A46 /* C4rk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4rk.framework */; };
+		A96F507F1B538650002B3A46 /* C4rk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 614F824319DB5ED3001DF1D4 /* C4rk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC1388C52715045200BEC327 /* C4.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1388C12715045200BEC327 /* C4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC1388D3271504AD00BEC327 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388C9271504AD00BEC327 /* Math.swift */; };
 		DC1388D4271504AD00BEC327 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CA271504AD00BEC327 /* Rect.swift */; };
@@ -125,7 +125,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A96F507F1B538650002B3A46 /* C4.framework in Embed Frameworks */,
+				A96F507F1B538650002B3A46 /* C4rk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		614F824319DB5ED3001DF1D4 /* C4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = C4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		614F824319DB5ED3001DF1D4 /* C4rk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = C4rk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		614F824E19DB5ED4001DF1D4 /* C4Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C4Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F505A1B5385A5002B3A46 /* C4DummyAppTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C4DummyAppTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96F505D1B5385A5002B3A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94E3BD419E0E9390039A9C4 /* C4.framework in Frameworks */,
+				A94E3BD419E0E9390039A9C4 /* C4rk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96F507E1B538650002B3A46 /* C4.framework in Frameworks */,
+				A96F507E1B538650002B3A46 /* C4rk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +263,7 @@
 		614F824419DB5ED3001DF1D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				614F824319DB5ED3001DF1D4 /* C4.framework */,
+				614F824319DB5ED3001DF1D4 /* C4rk.framework */,
 				614F824E19DB5ED4001DF1D4 /* C4Tests-iOS.xctest */,
 				A96F505A1B5385A5002B3A46 /* C4DummyAppTestHost.app */,
 			);
@@ -440,7 +440,7 @@
 			);
 			name = "C4-iOS";
 			productName = C4iOS;
-			productReference = 614F824319DB5ED3001DF1D4 /* C4.framework */;
+			productReference = 614F824319DB5ED3001DF1D4 /* C4rk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		614F824D19DB5ED4001DF1D4 /* C4Tests-iOS */ = {
@@ -833,38 +833,46 @@
 		614F825719DB5ED4001DF1D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G58XPAD97M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/C4rk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c4ios.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = C4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlankellaway.c4rk;
+				PRODUCT_NAME = C4rk;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		614F825819DB5ED4001DF1D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G58XPAD97M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/C4rk/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c4ios.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = C4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlankellaway.c4rk;
+				PRODUCT_NAME = C4rk;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -873,6 +881,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = G58XPAD97M;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -880,7 +889,7 @@
 				);
 				INFOPLIST_FILE = Tests/C4rkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c4ios.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harlankellaway.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -893,10 +902,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = G58XPAD97M;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Tests/C4rkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c4ios.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harlankellaway.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;

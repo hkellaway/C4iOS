@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "614F824219DB5ED3001DF1D4"
-               BuildableName = "C4.framework"
+               BuildableName = "C4rk.framework"
                BlueprintName = "C4-iOS"
                ReferencedContainer = "container:C4.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "614F824219DB5ED3001DF1D4"
-            BuildableName = "C4.framework"
+            BuildableName = "C4rk.framework"
             BlueprintName = "C4-iOS"
             ReferencedContainer = "container:C4.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "614F824219DB5ED3001DF1D4"
-            BuildableName = "C4.framework"
+            BuildableName = "C4rk.framework"
             BlueprintName = "C4-iOS"
             ReferencedContainer = "container:C4.xcodeproj">
          </BuildableReference>
@@ -79,7 +79,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "614F824219DB5ED3001DF1D4"
-            BuildableName = "C4.framework"
+            BuildableName = "C4rk.framework"
             BlueprintName = "C4-iOS"
             ReferencedContainer = "container:C4.xcodeproj">
          </BuildableReference>
