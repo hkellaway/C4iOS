@@ -1,7 +1,7 @@
 //
 //
-//  HexColorScannerTests.swift
-//  C4rk
+//  HexColorTests.swift
+//  C4
 //
 // Copyright (c) 2021 Harlan Kellaway
 //
@@ -26,46 +26,20 @@
 //
 
 import C4rk
+import UIKit
 import XCTest
 
-class HexColorScannerTests: XCTestCase {
+final class HexColorTests: XCTestCase {
     
-    var sut: HexColorScanner!
-    
-    override func setUp() {
-        super.setUp()
-        
-        sut = Scanner()
+    func test_initWithString_validString_isColor() {
+        let hexColor: HexColor = "#C4ABCD"
+        XCTAssertEqual(hexColor.uiColor,
+                       UIColor(red: 196 / 255, green: 171 / 255, blue: 205 / 255, alpha: 1))
     }
     
-    override func tearDown() {
-        super.tearDown()
-        
-        sut = nil
-    }
-    
-    func test_validHexString_withHashMark_returnsRGBA() {
-        let string = "#C4ABCD"
-        XCTAssert(rgbEqual(lhs: try! sut.rgba(fromHex: string).get(),
-                           rhs: (196, 171, 205, 1)))
-    }
-    
-    func test_validHexString_withoutHashMark_returnsRGBA() {
-        let string = "C4ABCD"
-        XCTAssert(rgbEqual(lhs: try! sut.rgba(fromHex: string).get(),
-                           rhs: (196, 171, 205, 1)))
-    }
-    
-    func test_validHexString_withAlpha_returnsRGBA() {
-        let string = "C4ABCD"
-        let alpha: CGFloat = 0.12345
-        XCTAssert(rgbEqual(lhs: try! sut.rgba(fromHex: string, alpha: alpha).get(),
-                           rhs: (196, 171, 205, alpha)))
-    }
-    
-    func test_invalidHexString_isFailure() {
-        let invalidString = "-1"
-        XCTAssert(sut.rgba(fromHex: invalidString).isFailure)
+    func test_initWithString_invalidString_isInvalid() {
+        let hexColor = HexColor(stringLiteral: "-1")
+        XCTAssert(hexColor.isInvalid)
     }
     
 }
