@@ -97,12 +97,16 @@
 		DC1389742715DA4C00BEC327 /* String+C4rk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1389732715DA4C00BEC327 /* String+C4rk.swift */; };
 		DC1389782715DEE300BEC327 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1389762715DEC800BEC327 /* TestHelpers.swift */; };
 		DC3730DA2719C5640091C0AF /* RGBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730D92719C5640091C0AF /* RGBValue.swift */; };
+		DC3730DC2719C5AA0091C0AF /* CGFloat+C4rk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730DB2719C5AA0091C0AF /* CGFloat+C4rk.swift */; };
 		DC3730DE2719C6880091C0AF /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730DD2719C6880091C0AF /* HexColor.swift */; };
 		DC3730E02719C6DF0091C0AF /* UIColor+C4rk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730DF2719C6DF0091C0AF /* UIColor+C4rk.swift */; };
 		DC3730E32719C7DA0091C0AF /* RGBValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730E12719C7D30091C0AF /* RGBValueTests.swift */; };
 		DC3730E52719DA470091C0AF /* AlphaValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730E42719DA470091C0AF /* AlphaValue.swift */; };
 		DC3730E82719DBEC0091C0AF /* AlphaValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730E62719DBE40091C0AF /* AlphaValueTests.swift */; };
 		DC3730EB271A353C0091C0AF /* HexColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730E9271A35360091C0AF /* HexColorTests.swift */; };
+		DC3730ED271A4AAB0091C0AF /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730EC271A4AAB0091C0AF /* RGBColor.swift */; };
+		DC3730F0271A4D4E0091C0AF /* RGBColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730EE271A4D460091C0AF /* RGBColorTests.swift */; };
+		DC3730F2271A52D10091C0AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730F1271A52D10091C0AF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,12 +241,16 @@
 		DC1389732715DA4C00BEC327 /* String+C4rk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+C4rk.swift"; sourceTree = "<group>"; };
 		DC1389762715DEC800BEC327 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		DC3730D92719C5640091C0AF /* RGBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValue.swift; sourceTree = "<group>"; };
+		DC3730DB2719C5AA0091C0AF /* CGFloat+C4rk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+C4rk.swift"; sourceTree = "<group>"; };
 		DC3730DD2719C6880091C0AF /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		DC3730DF2719C6DF0091C0AF /* UIColor+C4rk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+C4rk.swift"; sourceTree = "<group>"; };
 		DC3730E12719C7D30091C0AF /* RGBValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValueTests.swift; sourceTree = "<group>"; };
 		DC3730E42719DA470091C0AF /* AlphaValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaValue.swift; sourceTree = "<group>"; };
 		DC3730E62719DBE40091C0AF /* AlphaValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaValueTests.swift; sourceTree = "<group>"; };
 		DC3730E9271A35360091C0AF /* HexColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorTests.swift; sourceTree = "<group>"; };
+		DC3730EC271A4AAB0091C0AF /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
+		DC3730EE271A4D460091C0AF /* RGBColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColorTests.swift; sourceTree = "<group>"; };
+		DC3730F1271A52D10091C0AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +338,7 @@
 				DC3730E62719DBE40091C0AF /* AlphaValueTests.swift */,
 				DC3730E9271A35360091C0AF /* HexColorTests.swift */,
 				DC13896B2715D34600BEC327 /* HexColorScannerTests.swift */,
+				DC3730EE271A4D460091C0AF /* RGBColorTests.swift */,
 				DC3730E12719C7D30091C0AF /* RGBValueTests.swift */,
 				DC1389752715DEB800BEC327 /* Helpers */,
 				DC13895B271504DE00BEC327 /* ColorTests.swift */,
@@ -348,6 +357,7 @@
 			children = (
 				DC1389792715E11100BEC327 /* Color */,
 				DC1389722715DA3C00BEC327 /* Extensions */,
+				DC3730F1271A52D10091C0AF /* Constants.swift */,
 				DC1388C9271504AD00BEC327 /* Math.swift */,
 				DC1388CA271504AD00BEC327 /* Rect.swift */,
 				DC1388CB271504AD00BEC327 /* EventSource.swift */,
@@ -442,6 +452,7 @@
 		DC1389722715DA3C00BEC327 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC3730DB2719C5AA0091C0AF /* CGFloat+C4rk.swift */,
 				DC1389732715DA4C00BEC327 /* String+C4rk.swift */,
 				DC3730DF2719C6DF0091C0AF /* UIColor+C4rk.swift */,
 			);
@@ -462,6 +473,7 @@
 				DC3730E42719DA470091C0AF /* AlphaValue.swift */,
 				DC3730DD2719C6880091C0AF /* HexColor.swift */,
 				DC13896E2715D72500BEC327 /* HexColorScanner.swift */,
+				DC3730EC271A4AAB0091C0AF /* RGBColor.swift */,
 				DC3730D92719C5640091C0AF /* RGBValue.swift */,
 			);
 			path = Color;
@@ -668,10 +680,12 @@
 				DC13894F271504B500BEC327 /* Camera.swift in Sources */,
 				DC138924271504B500BEC327 /* Checkerboard.swift in Sources */,
 				DC13893F271504B500BEC327 /* UIViewController+C4View.swift in Sources */,
+				DC3730DC2719C5AA0091C0AF /* CGFloat+C4rk.swift in Sources */,
 				DC13894B271504B500BEC327 /* Font.swift in Sources */,
 				DC138956271504B500BEC327 /* UIView+AddRemove.swift in Sources */,
 				DC1388DA271504AD00BEC327 /* Vector.swift in Sources */,
 				DC138943271504B500BEC327 /* View+Border.swift in Sources */,
+				DC3730F2271A52D10091C0AF /* Constants.swift in Sources */,
 				DC138954271504B500BEC327 /* StoredAnimation.swift in Sources */,
 				DC138947271504B500BEC327 /* Pixel.swift in Sources */,
 				DC13894A271504B500BEC327 /* View+Shadow.swift in Sources */,
@@ -698,6 +712,7 @@
 				DC138921271504B500BEC327 /* Bloom.swift in Sources */,
 				DC138952271504B500BEC327 /* Triangle.swift in Sources */,
 				DC138931271504B500BEC327 /* CanvasController.swift in Sources */,
+				DC3730ED271A4AAB0091C0AF /* RGBColor.swift in Sources */,
 				DC13891D271504B500BEC327 /* LinearGradient.swift in Sources */,
 				DC1388D8271504AD00BEC327 /* Point.swift in Sources */,
 				DC1388D7271504AD00BEC327 /* Transform.swift in Sources */,
@@ -726,6 +741,7 @@
 				DC3730E82719DBEC0091C0AF /* AlphaValueTests.swift in Sources */,
 				DC138960271504DE00BEC327 /* VectorTests.swift in Sources */,
 				DC138961271504DE00BEC327 /* MathTests.swift in Sources */,
+				DC3730F0271A4D4E0091C0AF /* RGBColorTests.swift in Sources */,
 				DC3730E32719C7DA0091C0AF /* RGBValueTests.swift in Sources */,
 				DC138963271504DE00BEC327 /* RectTests.swift in Sources */,
 				DC3730EB271A353C0091C0AF /* HexColorTests.swift in Sources */,

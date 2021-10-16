@@ -1,6 +1,6 @@
 //
 //
-//  HexColor.swift
+//  RGBColor.swift
 //  C4rk
 //
 // Copyright (c) 2021 Harlan Kellaway
@@ -28,13 +28,10 @@
 import CoreGraphics
 import UIKit
 
-/// Color representable by a hex string (ex. #C4ABCD).
-public struct HexColor: CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
+/// Color representable by an RGB value (ex. (0, 10, 200).
+public struct RGBColor: CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
     
-    /// Raw string value (ex. #C4ABCD).
     public let rawValue: String
-    
-    /// `UIColor` representation.
     public let uiColor: UIColor
     
     public var isInvalid: Bool {
@@ -45,31 +42,41 @@ public struct HexColor: CustomStringConvertible, Equatable, ExpressibleByStringL
         return rawValue
     }
     
-    /// Initializes a `HexColor` given a string value.
-    /// - Parameter value: Hex string (ex. #C4ABCD).
     public init(stringLiteral value: StringLiteralType) {
         self.init(stringLiteral: value, alpha: 1.0)
     }
     
-    /// Initializes a `HexColor` given a string value.
-    /// - Parameters:
-    ///   - value: Hex string (ex. #C4ABCD).
-    ///   - alpha: Alpha value for color.
-    ///   - hexScanner: Scanner to extract hex value from string.
     public init(stringLiteral value: StringLiteralType,
                 alpha: CGFloat = 1.0,
-                hexScanner: HexColorScanner = Scanner()) {
-        guard case let .success(rgb) = hexScanner.rgba(fromHex: value, alpha: alpha) else {
+                numberFormatter: NumberFormatter = NumberFormatter()) {
+        guard AlphaValue.contains(alpha) else {
             // TODO: Use Logger
-            print("[C4rk] Failed to initialize `HexColor` using string literal '\(value)'.")
+            print("Failed to initialize `RGBColor using alpha '\(alpha)'.`")
             self.init(rawValue: kInvalidColorIdentifier, uiColor: .invalid)
             return
         }
         
-        let uiColor = UIColor(red: rgb.r / CGFloat(RGBValue.upperBound),
-                              green: rgb.g / CGFloat(RGBValue.upperBound),
-                              blue: rgb.b / CGFloat(RGBValue.upperBound),
-                              alpha: rgb.a)
+        numberFormatter.maximumIntegerDigits = 3
+        numberFormatter.maximumFractionDigits = 0
+        let rgb: [CGFloat] = value.trimmingCharacters(in: .whitespacesAndNewlines)
+            .dropFirst(1)
+            .dropLast(1)
+            .split(separator: ",")
+            .map(String.init)
+            .compactMap { CGFloat(string: $0, numberFormatter: numberFormatter) }
+            .filter { RGBValue.contains($0) }
+        
+        guard rgb.count == 3 else {
+            // TODO: Use Logger
+            print("[C4rk] Failed to initialize `RGBColor` using string literal '\(value)'.")
+            self.init(rawValue: kInvalidColorIdentifier, uiColor: .invalid)
+            return
+        }
+        
+        let uiColor = UIColor(red: rgb[0] / CGFloat(RGBValue.upperBound),
+                              green: rgb[1] / CGFloat(RGBValue.upperBound),
+                              blue: rgb[2] / CGFloat(RGBValue.upperBound),
+                              alpha: alpha)
         self.init(rawValue: value, uiColor: uiColor)
     }
     
