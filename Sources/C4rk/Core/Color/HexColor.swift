@@ -29,7 +29,9 @@ import CoreGraphics
 import UIKit
 
 /// Color representable by a hex string (ex. #C4ABCD).
-public struct HexColor: CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
+public struct HexColor: ColorConvertible, CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
+    
+    // MARK: - Properties
     
     /// Raw string value (ex. #C4ABCD).
     public let rawValue: String
@@ -44,6 +46,8 @@ public struct HexColor: CustomStringConvertible, Equatable, ExpressibleByStringL
     public var description: String {
         return rawValue
     }
+    
+    // MARK: - Init/Deinit
     
     /// Initializes a `HexColor` given a string value.
     /// - Parameter value: Hex string (ex. #C4ABCD).
@@ -76,6 +80,18 @@ public struct HexColor: CustomStringConvertible, Equatable, ExpressibleByStringL
     private init(rawValue: String, uiColor: UIColor) {
         self.rawValue = rawValue
         self.uiColor = uiColor
+    }
+    
+}
+
+// MARK: - Protocol conformance
+
+// MARK: Equatable
+
+extension HexColor {
+    
+    public static func ==(lhs: HexColor, rhs: HexColor) -> Bool {
+        return lhs.isEqual(to: rhs)
     }
     
 }

@@ -29,7 +29,9 @@ import CoreGraphics
 import UIKit
 
 /// Color representable by an RGB value (ex. (0, 10, 200).
-public struct RGBColor: CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
+public struct RGBColor: ColorConvertible, CustomStringConvertible, Equatable, ExpressibleByStringLiteral {
+    
+    // MARK: - Properties
     
     public let rawValue: String
     public let uiColor: UIColor
@@ -41,6 +43,8 @@ public struct RGBColor: CustomStringConvertible, Equatable, ExpressibleByStringL
     public var description: String {
         return rawValue
     }
+    
+    // MARK: - Init/Deinit
     
     public init(stringLiteral value: StringLiteralType) {
         self.init(stringLiteral: value, alpha: 1.0)
@@ -83,6 +87,18 @@ public struct RGBColor: CustomStringConvertible, Equatable, ExpressibleByStringL
     private init(rawValue: String, uiColor: UIColor) {
         self.rawValue = rawValue
         self.uiColor = uiColor
+    }
+    
+}
+
+// MARK: - Protocol conformance
+
+// MARK: Equatable
+
+extension RGBColor {
+    
+    public static func ==(lhs: RGBColor, rhs: RGBColor) -> Bool {
+        return lhs.isEqual(to: rhs)
     }
     
 }

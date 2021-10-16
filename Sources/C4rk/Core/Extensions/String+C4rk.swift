@@ -27,6 +27,8 @@
 
 import Foundation
 
+// MARK: - Interntal extensions
+
 extension String {
     
     func dropFirst(_ k: Int = 1, if condition: @escaping (String) -> Bool) -> String {

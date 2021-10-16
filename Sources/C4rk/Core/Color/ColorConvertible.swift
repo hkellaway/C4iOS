@@ -1,7 +1,7 @@
 //
 //
-//  CGFloat+C4rk.swift
-//  C4rk
+//  ColorConvertible.swift
+//  C4
 //
 // Copyright (c) 2021 Harlan Kellaway
 //
@@ -26,17 +26,43 @@
 //
 
 import CoreGraphics
-import Foundation
+import UIKit
 
-// MARK: - Internal extensions
-
-extension CGFloat {
+public protocol ColorConvertible {
+    var uiColor: UIColor { get }
     
-    init?(string: String, numberFormatter: NumberFormatter = NumberFormatter()) {
-        guard let number = numberFormatter.number(from: string) else {
-            return nil
+    func isEqual(to other: ColorConvertible) -> Bool
+}
+
+extension ColorConvertible {
+    
+    public var cgColor: CGColor {
+        return uiColor.cgColor
+    }
+    
+    public var ciColor: CIColor {
+        return uiColor.ciColor
+    }
+    
+}
+
+// MARK: - Equality
+
+extension ColorConvertible {
+    
+    public func isEqual(to other: ColorConvertible) -> Bool {
+        return self.cgColor.components == other.cgColor.components
+    }
+    
+}
+
+extension Array where Element == ColorConvertible {
+
+    public func isEqual(to other: [ColorConvertible]) -> Bool {
+        return zip(self, other).reduce(true) { (runningValue, colors) in
+            let (c1, c2) = colors
+            return runningValue && (type(of: c1) == type(of: c2) && c1.isEqual(to: c2))
         }
-        self.init(number.floatValue)
     }
 
 }

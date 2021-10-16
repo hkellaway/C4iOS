@@ -27,6 +27,18 @@
 
 import UIKit
 
+// MARK: - Public extensions
+
+extension UIColor: ColorConvertible {
+    
+    public var uiColor: UIColor {
+        return self
+    }
+    
+}
+
+// MARK: - Internal extensions
+
 extension UIColor {
     
     /// Color used internally to represent an invalid color result.
