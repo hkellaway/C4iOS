@@ -41,10 +41,10 @@ public class Gradient: View {
     }
 
     ///An array of Color objects defining the color of each gradient stop. Animatable.
-    public var colors: [Color] {
+    public var colors: [LegacyColor] {
         get {
             if let cgcolors = gradientLayer.colors as? [CGColor] {
-                return cgcolors.map({ Color($0) })
+                return cgcolors.map({ LegacyColor($0) })
             }
             return [C4Blue, C4Pink]
         } set {

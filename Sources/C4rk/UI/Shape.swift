@@ -150,7 +150,7 @@ open class Shape: View {
             context?.draw(gim!, in: CGRect(b), byTiling: true)
             let uiimage = UIGraphicsGetImageFromCurrentImageContext()
             let uicolor = UIColor(patternImage: uiimage!)
-            fillColor = Color(uicolor)
+            fillColor = LegacyColor(uicolor)
             UIGraphicsEndImageContext()
         }
     }
@@ -193,9 +193,9 @@ open class Shape: View {
     }
 
     /// The color to stroke the path, or nil for no fill. Defaults to opaque black. Animatable.
-    public var strokeColor: Color? {
+    public var strokeColor: LegacyColor? {
         get {
-            return shapeLayer.strokeColor.map({ Color($0) })
+            return shapeLayer.strokeColor.map({ LegacyColor($0) })
         }
         set(color) {
             shapeLayer.strokeColor = color?.cgColor
@@ -203,9 +203,9 @@ open class Shape: View {
     }
 
     /// The color to fill the path, or nil for no fill. Defaults to opaque black. Animatable.
-    public var fillColor: Color? {
+    public var fillColor: LegacyColor? {
         get {
-            return shapeLayer.fillColor.map({ Color($0) })
+            return shapeLayer.fillColor.map({ LegacyColor($0) })
         }
         set(color) {
             shapeLayer.fillColor = color?.cgColor

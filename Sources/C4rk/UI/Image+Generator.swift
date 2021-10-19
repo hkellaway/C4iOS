@@ -20,7 +20,7 @@
 import QuartzCore
 import UIKit
 
-extension Image {
+extension LegacyImage {
     ///  Applies a generator to the receiver's contents.
     ///
     /// - parameter generator: a Generator

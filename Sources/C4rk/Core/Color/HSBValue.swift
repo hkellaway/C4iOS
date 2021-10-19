@@ -1,6 +1,6 @@
 //
 //
-//  UIColor+C4rk.swift
+//  HSBValue.swift
 //  C4rk
 //
 // Copyright (c) 2021 Harlan Kellaway
@@ -25,15 +25,7 @@
 //
 //
 
-import UIKit
+import CoreGraphics
 
-// MARK: - Internal extensions
-
-extension UIColor {
-    
-    /// Color used internally to represent an invalid color result.
-    static var invalid: UIColor {
-        return .red
-    }
-    
-}
+/// Type representing an HSB value used to compose a color. A value between 0 and 1 inclusive.
+public let HSBValue: ClosedRange<CGFloat> = .betweenOneAndZero()

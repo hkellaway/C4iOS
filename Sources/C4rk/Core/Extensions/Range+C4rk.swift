@@ -1,6 +1,6 @@
 //
 //
-//  UIColor+C4rk.swift
+//  Range+C4rk.swift
 //  C4rk
 //
 // Copyright (c) 2021 Harlan Kellaway
@@ -25,15 +25,13 @@
 //
 //
 
-import UIKit
+import CoreGraphics
 
 // MARK: - Internal extensions
 
-extension UIColor {
+extension ClosedRange {
     
-    /// Color used internally to represent an invalid color result.
-    static var invalid: UIColor {
-        return .red
-    }
+    /// A range between 0 and 1 inclusive.
+    static func betweenOneAndZero() -> ClosedRange<CGFloat> { 0.0...1.0 }
     
 }

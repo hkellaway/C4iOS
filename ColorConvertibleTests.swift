@@ -1,7 +1,7 @@
 //
 //
 //  ColorConvertibleTests.swift
-//  C4
+//  C4rk
 //
 // Copyright (c) 2021 Harlan Kellaway
 //
@@ -30,9 +30,25 @@ import XCTest
 
 final class ColorConvertibleTests: XCTestCase {
     
+    let color = Color(red: 196, green: 171, blue: 205, alpha: 1)!
     let hexColor: HexColor = "#C4ABCD"
     let rgbColor: RGBColor = "(196, 171, 205)"
     let uiColor = UIColor(red: 196 / 255, green: 171 / 255, blue: 205 / 255, alpha: 1)
+    
+    func test_isEqual_color_hexColor() {
+        XCTAssert(color.isEqual(to: hexColor))
+        XCTAssert(hexColor.isEqual(to: color))
+    }
+    
+    func test_isEqual_color_rgbColor() {
+        XCTAssert(color.isEqual(to: rgbColor))
+        XCTAssert(rgbColor.isEqual(to: color))
+    }
+    
+    func test_isEqual_color_uiColor() {
+        XCTAssert(color.isEqual(to: uiColor))
+        XCTAssert(uiColor.isEqual(to: color))
+    }
     
     func test_isEqual_hexColor_rgbColor() {
         XCTAssert(hexColor.isEqual(to: rgbColor))

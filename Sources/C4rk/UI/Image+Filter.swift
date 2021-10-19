@@ -20,7 +20,7 @@
 import QuartzCore
 import UIKit
 
-extension Image {
+extension LegacyImage {
     ///  Applies a fiter to the receiver's contents.
     ///
     /// - parameter filter: a Filter

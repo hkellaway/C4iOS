@@ -23,7 +23,7 @@ import CoreGraphics
 public struct Border {
 
     /// Returns the color of the border.
-    public var color: Color?
+    public var color: LegacyColor?
 
     /// Returns the corner radius of the border.
     public var radius: Double
@@ -37,7 +37,7 @@ public struct Border {
     /// color = black
     /// width = 0.0
     public init() {
-        color = Color(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        color = LegacyColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         radius = 0.0
         width = 0.0
     }
@@ -62,7 +62,7 @@ extension View {
             var border = Border()
             if let layer = layer {
                 if let borderColor = layer.borderColor {
-                    border.color = Color(borderColor)
+                    border.color = LegacyColor(borderColor)
                 }
                 border.radius = Double(layer.cornerRadius)
                 border.width = Double(layer.borderWidth)

@@ -1,7 +1,7 @@
 //
 //
 //  ColorConvertible.swift
-//  C4
+//  C4rk
 //
 // Copyright (c) 2021 Harlan Kellaway
 //
@@ -29,17 +29,25 @@ import CoreGraphics
 import UIKit
 
 public protocol ColorConvertible {
+    /// Color cast to `UIColor`.
     var uiColor: UIColor { get }
     
+    /// Whether this color is equal to another.
+    ///
+    /// - Parameter other: Color to compare to.
+    ///
+    /// - Returns: True if equal, false otherwise.
     func isEqual(to other: ColorConvertible) -> Bool
 }
 
 extension ColorConvertible {
     
+    /// Color cast to `CGColor`.
     public var cgColor: CGColor {
         return uiColor.cgColor
     }
     
+    /// Color cast to `CIColor`.
     public var ciColor: CIColor {
         return uiColor.ciColor
     }
@@ -56,6 +64,8 @@ extension ColorConvertible {
     
 }
 
+// MARK: - Core type exetensions
+
 extension Array where Element == ColorConvertible {
 
     public func isEqual(to other: [ColorConvertible]) -> Bool {
@@ -65,4 +75,12 @@ extension Array where Element == ColorConvertible {
         }
     }
 
+}
+
+extension UIColor: ColorConvertible {
+    
+    public var uiColor: UIColor {
+        return self
+    }
+    
 }

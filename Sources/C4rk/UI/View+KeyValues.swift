@@ -42,7 +42,7 @@ extension View {
             size = Size(nsvalue.cgSizeValue)
 
         case ("backgroundColor", let color as UIColor):
-            backgroundColor = Color(color)
+            backgroundColor = LegacyColor(color)
 
         default:
             super.setValue(value, forKey: key)

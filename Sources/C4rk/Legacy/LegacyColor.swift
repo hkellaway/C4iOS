@@ -17,57 +17,57 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 // IN THE SOFTWARE.
 
-import UIKit
 import CoreGraphics
+import UIKit
 
 /// A Color object whose RGB value is 0, 0, 0 and whose alpha value is 1.0.
-public let black     = Color(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+public let black     = LegacyColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.33, 0.33, 0.33 and whose alpha value is 1.0.
-public let darkGray  = Color(red: 1.0/3.0, green: 1.0/3.0, blue: 1.0/3.0, alpha: 1.0)
+public let darkGray  = LegacyColor(red: 1.0/3.0, green: 1.0/3.0, blue: 1.0/3.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.66, 0.66, 0.66 and whose alpha value is 1.0.
-public let lightGray = Color(red: 2.0/3.0, green: 2.0/3.0, blue: 2.0/3.0, alpha: 1.0)
+public let lightGray = LegacyColor(red: 2.0/3.0, green: 2.0/3.0, blue: 2.0/3.0, alpha: 1.0)
 /// A Color object whose RGB value is 1.0, 1.0, 1.0 and whose alpha value is 1.0.
-public let white     = Color(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+public let white     = LegacyColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.5, 0.5, 0.5 and whose alpha value is 1.0.
-public let gray      = Color(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+public let gray      = LegacyColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
 /// A Color object whose RGB value is 1.0, 0.0, 0.0 and whose alpha value is 1.0.
-public let red       = Color(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+public let red       = LegacyColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.0, 1.0, 0.0 and whose alpha value is 1.0.
-public let green     = Color(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
+public let green     = LegacyColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.0, 0.0, 1.0 and whose alpha value is 1.0.
-public let blue      = Color(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+public let blue      = LegacyColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.0, 1.0, 1.0 and whose alpha value is 1.0.
-public let cyan      = Color(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0)
+public let cyan      = LegacyColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0)
 /// A Color object whose RGB value is 1.0, 1.0, 0.0 and whose alpha value is 1.0.
-public let yellow    = Color(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
+public let yellow    = LegacyColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
 /// A Color object whose RGB value is 1.0, 0.0, 1.0 and whose alpha value is 1.0.
-public let magenta   = Color(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+public let magenta   = LegacyColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
 /// A Color object whose RGB value is 1.0, 0.5, 0.0 and whose alpha value is 1.0.
-public let orange    = Color(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
+public let orange    = LegacyColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
 /// A Color object whose RGB value is 0.5, 0.0, 0.5 and whose alpha value is 1.0.
-public let purple    = Color(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
+public let purple    = LegacyColor(red: 0.5, green: 0.0, blue: 0.5, alpha: 1.0)
 /// A Color object whose RGB value is 0.6, 0.4, 0.2 and whose alpha value is 1.0.
-public let brown     = Color(red: 0.6, green: 0.4, blue: 0.2, alpha: 1.0)
+public let brown     = LegacyColor(red: 0.6, green: 0.4, blue: 0.2, alpha: 1.0)
 /// A Color object whose RGB value is 0.0, 0.0, 0.0 and whose alpha value is 0.0.
-public let clear     = Color(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+public let clear     = LegacyColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
 
 ///A Color object whose RGB value is 1.0, 0.0, 0.475 and whose alpha value is 1.0.
-public let C4Pink    = Color(red: 1.0, green: 0.0, blue: 0.475, alpha: 1.0)
+public let C4Pink    = LegacyColor(red: 1.0, green: 0.0, blue: 0.475, alpha: 1.0)
 ///A Color object whose RGB value is 0.098, 0.271, 1.0 and whose alpha value is 1.0.
-public let C4Blue    = Color(red: 0.098, green: 0.271, blue: 1.0, alpha: 1.0)
+public let C4Blue    = LegacyColor(red: 0.098, green: 0.271, blue: 1.0, alpha: 1.0)
 ///A Color object whose RGB value is 0.0, 0.0, 0.541 and whose alpha value is 1.0.
-public let C4Purple  = Color(red: 0.0, green: 0.0, blue: 0.541, alpha: 1.0)
+public let C4Purple  = LegacyColor(red: 0.0, green: 0.0, blue: 0.541, alpha: 1.0)
 ///A Color object whose RGB value is 0.98, 0.98, 0.98 and whose alpha value is 1.0.
-public let C4Grey    = Color(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
+public let C4Grey    = LegacyColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
 
 /// This document describes the Color object which represents color and sometimes opacity (alpha value). You can use Color
 /// objects to store color data, and pass them between various C4 objects such as Shape, Image, etc.
 ///
 /// Color internally wraps a CGColorSpaceRef called colorSpace, as well as a CGColorRef. From these two objects Color is able to
 /// properly maintain color data and convert it to / from other color objects such as UIColor, CIColor, Color, etc.
-public class Color {
-    internal var colorSpace: CGColorSpace
-    internal var internalColor: CGColor
+public class LegacyColor {
+    fileprivate var colorSpace: CGColorSpace
+    fileprivate var internalColor: CGColor
 
     /// Initializes and returns a new color object. Defaults to black with 0 opacity (i.e. clear).
     /// ````
@@ -140,7 +140,7 @@ public class Color {
     ///  let p = Color(pattern)
     ///  ````
     /// - parameter patternImage: an Image.
-    public convenience init(_ patternImage: Image) {
+    public convenience init(_ patternImage: LegacyImage) {
         self.init(UIColor(patternImage: patternImage.uiimage))
     }
 
@@ -327,8 +327,8 @@ public class Color {
     /// ````
     /// - parameter alpha: The opacity value of the new UIColor object.
     /// - returns: A new color with a modified alpha component.
-    public func colorWithAlpha(_ alpha: Double) -> Color {
-        return Color(red: red, green: green, blue: blue, alpha: alpha)
+    public func colorWithAlpha(_ alpha: Double) -> LegacyColor {
+        return LegacyColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
 
@@ -337,7 +337,7 @@ public class Color {
 extension UIColor {
     /// Initializes a UIColor object from a Color object.
     /// - parameter color: The C4 color object.
-    public convenience init?(_ color: Color) {
+    public convenience init?(_ color: LegacyColor) {
         self.init(cgColor: color.cgColor)
     }
 }
@@ -345,7 +345,7 @@ extension UIColor {
 extension CIColor {
     /// Initializes a CIColor object from a Color object.
     /// - parameter color: The C4 color object.
-    public convenience init(_ color: Color) {
+    public convenience init(_ color: LegacyColor) {
         self.init(cgColor: color.cgColor)
     }
 }

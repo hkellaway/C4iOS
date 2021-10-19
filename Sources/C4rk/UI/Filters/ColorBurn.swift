@@ -33,7 +33,7 @@ public struct ColorBurn: Filter {
     /// The name of the Core Image filter.
     public let filterName = "CIColorBurnBlendMode"
     /// The background image to use for the burn.
-    public var background: Image = Image()
+    public var background: LegacyImage = LegacyImage()
     ///Initializes a new filter
     public init() {}
 

@@ -30,7 +30,7 @@ public struct Shadow {
     /// Returns the color of the shadow. Animatable.
     ///
     /// Assigning an new value to this will change the color of the shadow.
-    public var color: Color?
+    public var color: LegacyColor?
 
     /// Returns the offset of the shadow. Animatable.
     ///
@@ -55,7 +55,7 @@ public struct Shadow {
     /// opacity = 0.0
     public init() {
         radius = 5.0
-        color = Color(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        color = LegacyColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         offset = Size(5, 5)
         opacity = 0.0
     }
@@ -85,7 +85,7 @@ extension View {
             if let layer = layer {
                 shadow.radius = Double(layer.shadowRadius)
                 if let color = layer.shadowColor {
-                    shadow.color = Color(color)
+                    shadow.color = LegacyColor(color)
                 }
                 shadow.offset = Size(layer.shadowOffset)
                 shadow.opacity = Double(layer.shadowOpacity)

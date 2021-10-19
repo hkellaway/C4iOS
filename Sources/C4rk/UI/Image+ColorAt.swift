@@ -20,7 +20,7 @@
 import Foundation
 import CoreGraphics
 
-extension Image {
+extension LegacyImage {
     ///  Initializes and returns a new cgimage from the color at a specified point in the receiver.
     ///  ````
     ///  let image = cgimage(at: CGPoint())
@@ -50,7 +50,7 @@ extension Image {
     ///  let color = img.color(at: Point())
     ///  ````
     /// - parameter at: a Point.
-    public func color(at point: Point) -> Color {
+    public func color(at point: Point) -> LegacyColor {
 
         guard bounds.contains(point) else {
             print("Point is outside the image bounds")
@@ -66,7 +66,7 @@ extension Image {
         let imageData = imageProvider?.data
         let data: UnsafePointer<UInt8> = CFDataGetBytePtr(imageData)
 
-        return Color(red: Double(data[1])/255.0,
+        return LegacyColor(red: Double(data[1])/255.0,
                      green: Double(data[2])/255.0,
                      blue: Double(data[3])/255.0,
                      alpha: Double(data[0])/255.0)

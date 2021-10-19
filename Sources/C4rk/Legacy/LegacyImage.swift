@@ -19,8 +19,16 @@
 
 import UIKit
 
+extension Color {
+    
+    public convenience init(patternImage: LegacyImage) {
+        self.init(uiColor: UIColor(patternImage: patternImage.uiimage))
+    }
+    
+}
+
 /// A Image provides a view-based container for displaying a single image. You can create images from files, from other image objects, or from raw image data you receive.
-open class Image: View, NSCopying {
+open class LegacyImage: View, NSCopying {
     open class ImageView: UIImageView {
         var imageLayer: ImageLayer {
             return self.layer as! ImageLayer // swiftlint:disable:this force_cast
@@ -87,7 +95,7 @@ open class Image: View, NSCopying {
     /// canvas.add(b)
     /// ````
     /// - parameter image: A Image.
-    convenience public init(copy image: Image) {
+    convenience public init(copy image: LegacyImage) {
         self.init()
         let uiimage = image.uiimage
         self.view = ImageView(image: uiimage)
@@ -269,7 +277,7 @@ open class Image: View, NSCopying {
 
     /// Initializes a new Image using another image.
     /// - parameter c4image: An Image around which the new image is created.
-    convenience public init(c4image: Image) {
+    convenience public init(c4image: LegacyImage) {
         let cgim = c4image.cgImage
         self.init(cgimage: cgim, scale: c4image.scale)
     }
@@ -279,7 +287,7 @@ open class Image: View, NSCopying {
     /// - returns: a new instance that’s a copy of the receiver.
     public func copy(with zone: NSZone? = nil) -> Any {
         let uiimage = UIImage(cgImage: self.contents)
-        let img = Image(uiimage: uiimage, scale: scale)
+        let img = LegacyImage(uiimage: uiimage, scale: scale)
         img.frame = self.frame
         img.constrainsProportions = self.constrainsProportions
         img._originalSize = _originalSize

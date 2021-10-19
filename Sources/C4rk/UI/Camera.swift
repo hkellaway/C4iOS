@@ -38,7 +38,7 @@ public enum CameraPosition: Int {
 }
 
 public class Camera: View {
-    public var capturedImage: Image?
+    public var capturedImage: LegacyImage?
     public var quality = AVCaptureSession.Preset.photo
     public var position = CameraPosition.front
 
@@ -237,7 +237,7 @@ extension Camera: AVCapturePhotoCaptureDelegate {
         isCapturingStillImage = false
 
         if let img = UIImage(data: photo.fileDataRepresentation()!) {
-            self.capturedImage = Image(uiimage: self.orientRawImage(img))
+            self.capturedImage = LegacyImage(uiimage: self.orientRawImage(img))
             self.didCaptureAction?()
         }
     }

@@ -22,7 +22,7 @@ import UIKit
 extension View {
     /// Creates a flattened image of the receiver and its subviews / layers.
     /// - returns: A new Image
-    @objc public func render() -> Image? {
+    @objc public func render() -> LegacyImage? {
         guard let l = layer else {
             print("Could not retrieve layer for current object: \(self)")
             return nil
@@ -32,7 +32,7 @@ extension View {
         l.render(in: context)
         let uiimage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return Image(uiimage: uiimage!)
+        return LegacyImage(uiimage: uiimage!)
     }
 }
 
@@ -40,7 +40,7 @@ extension Shape {
     /// Creates a flattened image of the receiver and its subviews / layers.
     /// This override takes into consideration the lineWidth of the receiver.
     /// - returns: A new Image
-    public override func render() -> Image? {
+    public override func render() -> LegacyImage? {
         var s = CGSize(size)
         var inset: CGFloat = 0
 
@@ -56,6 +56,6 @@ extension Shape {
         shapeLayer.render(in: context)
         let uiimage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return Image(uiimage: uiimage!)
+        return LegacyImage(uiimage: uiimage!)
     }
 }

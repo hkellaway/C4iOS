@@ -102,8 +102,8 @@ open class View: NSObject {
         if let maskToCopy = viewToCopy.mask {
             if viewToCopy.mask is Shape {
                 mask = Shape(copy: viewToCopy.mask as! Shape) // swiftlint:disable:this force_cast
-            } else if viewToCopy.mask is Image {
-                mask = Image(copy: viewToCopy.mask as! Image) // swiftlint:disable:this force_cast
+            } else if viewToCopy.mask is LegacyImage {
+                mask = LegacyImage(copy: viewToCopy.mask as! LegacyImage) // swiftlint:disable:this force_cast
             } else {
                 mask = View(copyView: maskToCopy)
             }
@@ -202,10 +202,10 @@ open class View: NSObject {
     }
 
     /// Returns the receiver's background color. Animatable.
-    public var backgroundColor: Color? {
+    public var backgroundColor: LegacyColor? {
         get {
             if let color = view.backgroundColor {
-                return Color(color)
+                return LegacyColor(color)
             } else {
                 return nil
             }

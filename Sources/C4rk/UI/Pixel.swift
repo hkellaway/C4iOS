@@ -50,7 +50,7 @@ public struct Pixel {
         self.a = UInt8(a)
     }
 
-    public init(_ color: Color) {
+    public init(_ color: LegacyColor) {
         let rgba: [Int] = color.components.map({ Int($0 * 255.0) })
         self.init(rgba[0], rgba[1], rgba[2], rgba[3])
     }

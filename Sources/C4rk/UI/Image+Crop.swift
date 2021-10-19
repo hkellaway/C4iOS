@@ -20,7 +20,7 @@
 import QuartzCore
 import UIKit
 
-extension Image {
+extension LegacyImage {
     ///  Crops the receiver's contents to the specified frame within the receiver's coordinate space.
     ///
     /// - parameter rect: a Rect

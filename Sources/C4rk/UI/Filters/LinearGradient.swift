@@ -32,7 +32,7 @@ public struct LinearGradient: Generator {
     /// The name of the Core Image filter.
     public let filterName = "CISmoothLinearGradient"
     /// The colors of the filter. Defaults to `[C4Pink, C4Blue]`
-    public var colors: [Color] = [C4Pink, C4Blue]
+    public var colors: [LegacyColor] = [C4Pink, C4Blue]
     /// The endpoints of the filter. Defaults to `[Point(), Point(100, 100)]`
     public var points: [Point] = [Point(), Point(100, 100)]
 

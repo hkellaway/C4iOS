@@ -28,4 +28,4 @@
 import CoreGraphics
 
 /// Type representing the alpha value used to compose a color. A value between 0 and 1 inclusive.
-public let AlphaValue: ClosedRange<CGFloat> = CGFloat(0.0)...CGFloat(1.0)
+public let AlphaValue: ClosedRange<CGFloat> = .betweenOneAndZero()
