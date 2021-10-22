@@ -59,7 +59,7 @@ public class Movie: View {
         get {
             return Double(view.frame.size.width)
         } set(val) {
-            var newSize = Size(val, height)
+            var newSize = LegacySize(val, height)
             if constrainsProportions {
                 newSize.height = val * height / width
             }
@@ -77,7 +77,7 @@ public class Movie: View {
         get {
             return Double(view.frame.size.height)
         } set(val) {
-            var newSize = Size(Double(view.frame.size.width), val)
+            var newSize = LegacySize(Double(view.frame.size.width), val)
             if constrainsProportions {
                 let ratio = Double(self.size.width / self.size.height)
                 newSize.width = val * ratio
@@ -94,7 +94,7 @@ public class Movie: View {
     public var constrainsProportions: Bool = true
 
     /// The original size of the receiver when it was initialized.
-    public internal(set) var originalSize: Size = Size(1, 1)
+    public internal(set) var originalSize: LegacySize = LegacySize(1, 1)
 
     /// The original width/height ratio of the receiver when it was initialized.
     public var originalRatio: Double {

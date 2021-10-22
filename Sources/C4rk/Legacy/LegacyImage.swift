@@ -132,7 +132,7 @@ open class LegacyImage: View, NSCopying {
         } else {
             self.view = ImageView(image: uiimage)
         }
-        _originalSize = Size(view.frame.size)
+        _originalSize = LegacySize(view.frame.size)
     }
 
     /// Initializes a new Image using a CGImageRef.
@@ -240,7 +240,7 @@ open class LegacyImage: View, NSCopying {
     /// pixels. Pixel data should be RGBA.
     /// - parameter pixels: An array of raw pixel data.
     /// - parameter size: The size {w, h} of the image you're creating based on the pixel array.
-    convenience public init(pixels: [Pixel], size: Size) {
+    convenience public init(pixels: [Pixel], size: LegacySize) {
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo: CGBitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
         let bitsPerComponent: Int = 8
@@ -363,7 +363,7 @@ open class LegacyImage: View, NSCopying {
         get {
             return Double(view.frame.size.width)
         } set(val) {
-            var newSize = Size(val, Double(view.frame.size.height))
+            var newSize = LegacySize(val, Double(view.frame.size.height))
             if constrainsProportions {
                 let ratio = Double(self.size.height / self.size.width)
                 newSize.height = val * ratio
@@ -382,7 +382,7 @@ open class LegacyImage: View, NSCopying {
         get {
             return Double(view.frame.size.height)
         } set(val) {
-            var newSize = Size(Double(view.frame.size.width), val)
+            var newSize = LegacySize(Double(view.frame.size.width), val)
             if constrainsProportions {
                 let ratio = Double(self.size.width / self.size.height)
                 newSize.width = val * ratio
@@ -398,9 +398,9 @@ open class LegacyImage: View, NSCopying {
     /// The default value of this property is `false`.
     open var constrainsProportions: Bool = false
 
-    internal var _originalSize: Size = Size()
+    internal var _originalSize: LegacySize = LegacySize()
     /// The original size of the receiver when it was initialized.
-    public var originalSize: Size {
+    public var originalSize: LegacySize {
         return _originalSize
     }
 

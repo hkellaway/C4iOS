@@ -182,7 +182,7 @@ open class View: NSObject {
     }
 
     /// Returns the receiver's frame size. Animatable.
-    public var size: Size {
+    public var size: LegacySize {
         get {
             return bounds.size
         }

@@ -19,7 +19,7 @@
 		DC1388D3271504AD00BEC327 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388C9271504AD00BEC327 /* Math.swift */; };
 		DC1388D4271504AD00BEC327 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CA271504AD00BEC327 /* Rect.swift */; };
 		DC1388D5271504AD00BEC327 /* EventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CB271504AD00BEC327 /* EventSource.swift */; };
-		DC1388D6271504AD00BEC327 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CC271504AD00BEC327 /* Size.swift */; };
+		DC1388D6271504AD00BEC327 /* LegacySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CC271504AD00BEC327 /* LegacySize.swift */; };
 		DC1388D7271504AD00BEC327 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CD271504AD00BEC327 /* Transform.swift */; };
 		DC1388D8271504AD00BEC327 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CE271504AD00BEC327 /* Point.swift */; };
 		DC1388D9271504AD00BEC327 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1388CF271504AD00BEC327 /* Path.swift */; };
@@ -113,6 +113,8 @@
 		DC3730FE271CFC3D0091C0AF /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730FC271CF8880091C0AF /* ColorTests.swift */; };
 		DC373100271F78D50091C0AF /* HSBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3730FF271F78D50091C0AF /* HSBValue.swift */; };
 		DC373108271F92E60091C0AF /* Range+C4rk.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC373107271F92E60091C0AF /* Range+C4rk.swift */; };
+		DC37310C272361D90091C0AF /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC37310B272361D90091C0AF /* Size.swift */; };
+		DC37310F272364C10091C0AF /* SizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC37310D272364B90091C0AF /* SizeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +170,7 @@
 		DC1388C9271504AD00BEC327 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		DC1388CA271504AD00BEC327 /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 		DC1388CB271504AD00BEC327 /* EventSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSource.swift; sourceTree = "<group>"; };
-		DC1388CC271504AD00BEC327 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		DC1388CC271504AD00BEC327 /* LegacySize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacySize.swift; sourceTree = "<group>"; };
 		DC1388CD271504AD00BEC327 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		DC1388CE271504AD00BEC327 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		DC1388CF271504AD00BEC327 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
@@ -263,6 +265,8 @@
 		DC3730FC271CF8880091C0AF /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
 		DC3730FF271F78D50091C0AF /* HSBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSBValue.swift; sourceTree = "<group>"; };
 		DC373107271F92E60091C0AF /* Range+C4rk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Range+C4rk.swift"; sourceTree = "<group>"; };
+		DC37310B272361D90091C0AF /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		DC37310D272364B90091C0AF /* SizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +359,7 @@
 				DC13896B2715D34600BEC327 /* HexColorScannerTests.swift */,
 				DC3730EE271A4D460091C0AF /* RGBColorTests.swift */,
 				DC3730E12719C7D30091C0AF /* RGBValueTests.swift */,
+				DC37310D272364B90091C0AF /* SizeTests.swift */,
 				DC1389752715DEB800BEC327 /* Helpers */,
 				DC13895B271504DE00BEC327 /* LegacyColorTests.swift */,
 				DC13895A271504DE00BEC327 /* MathTests.swift */,
@@ -371,12 +376,12 @@
 			isa = PBXGroup;
 			children = (
 				DC3730F1271A52D10091C0AF /* Constants.swift */,
+				DC37310B272361D90091C0AF /* Size.swift */,
 				DC1389792715E11100BEC327 /* Color */,
 				DC1389722715DA3C00BEC327 /* Extensions */,
 				DC1388C9271504AD00BEC327 /* Math.swift */,
 				DC1388CA271504AD00BEC327 /* Rect.swift */,
 				DC1388CB271504AD00BEC327 /* EventSource.swift */,
-				DC1388CC271504AD00BEC327 /* Size.swift */,
 				DC1388CD271504AD00BEC327 /* Transform.swift */,
 				DC1388CE271504AD00BEC327 /* Point.swift */,
 				DC1388CF271504AD00BEC327 /* Path.swift */,
@@ -465,6 +470,7 @@
 		DC1389682715C89800BEC327 /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
+				DC1388CC271504AD00BEC327 /* LegacySize.swift */,
 				DC1388D2271504AD00BEC327 /* LegacyColor.swift */,
 				DC1388FE271504B500BEC327 /* LegacyImage.swift */,
 			);
@@ -677,7 +683,7 @@
 			files = (
 				DC1388DB271504AD00BEC327 /* Foundation.swift in Sources */,
 				DC3730DA2719C5640091C0AF /* RGBValue.swift in Sources */,
-				DC1388D6271504AD00BEC327 /* Size.swift in Sources */,
+				DC1388D6271504AD00BEC327 /* LegacySize.swift in Sources */,
 				DC138939271504B500BEC327 /* View+Gestures.swift in Sources */,
 				DC13893B271504B500BEC327 /* TextShape.swift in Sources */,
 				DC13892C271504B500BEC327 /* Arc.swift in Sources */,
@@ -739,6 +745,7 @@
 				DC13896F2715D72500BEC327 /* HexColorScanner.swift in Sources */,
 				DC138942271504B500BEC327 /* Shape.swift in Sources */,
 				DC13891E271504B500BEC327 /* Twirl.swift in Sources */,
+				DC37310C272361D90091C0AF /* Size.swift in Sources */,
 				DC13891F271504B500BEC327 /* DotScreen.swift in Sources */,
 				DC138921271504B500BEC327 /* Bloom.swift in Sources */,
 				DC138952271504B500BEC327 /* Triangle.swift in Sources */,
@@ -773,6 +780,7 @@
 				DC3730FE271CFC3D0091C0AF /* ColorTests.swift in Sources */,
 				DC138960271504DE00BEC327 /* VectorTests.swift in Sources */,
 				DC138961271504DE00BEC327 /* MathTests.swift in Sources */,
+				DC37310F272364C10091C0AF /* SizeTests.swift in Sources */,
 				DC3730F0271A4D4E0091C0AF /* RGBColorTests.swift in Sources */,
 				DC3730E32719C7DA0091C0AF /* RGBValueTests.swift in Sources */,
 				DC138963271504DE00BEC327 /* RectTests.swift in Sources */,

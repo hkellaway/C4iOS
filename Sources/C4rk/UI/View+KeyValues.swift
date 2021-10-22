@@ -39,7 +39,7 @@ extension View {
             origin = Point(nsvalue.cgPointValue)
 
         case ("size", let nsvalue as NSValue):
-            size = Size(nsvalue.cgSizeValue)
+            size = LegacySize(nsvalue.cgSizeValue)
 
         case ("backgroundColor", let color as UIColor):
             backgroundColor = LegacyColor(color)

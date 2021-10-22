@@ -34,7 +34,7 @@ public class Rectangle: Shape {
     /// r.corner = Size(10,10)
     /// canvas.add(r)
     /// ````
-    public var corner: Size = Size(8, 8) {
+    public var corner: LegacySize = LegacySize(8, 8) {
         didSet {
             updatePath()
         }
@@ -52,7 +52,7 @@ public class Rectangle: Shape {
     public override init(frame: Rect) {
         super.init()
         if frame.size.width <= corner.width * 2.0 || frame.size.height <= corner.width / 2.0 {
-            corner = Size()
+            corner = LegacySize()
         }
         view.frame = CGRect(frame)
         updatePath()

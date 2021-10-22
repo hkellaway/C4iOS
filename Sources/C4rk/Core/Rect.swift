@@ -26,7 +26,7 @@ public struct Rect: Equatable, CustomStringConvertible {
     public var origin: Point
 
     /// The size (width / height) of the rect.
-    public var size: Size
+    public var size: LegacySize
 
     /// The width of the rect.
     public var width: Double {
@@ -60,7 +60,7 @@ public struct Rect: Equatable, CustomStringConvertible {
     /// ````
     public init(_ x: Double, _ y: Double, _ w: Double, _ h: Double) {
         origin = Point(x, y)
-        size = Size(w, h)
+        size = LegacySize(w, h)
     }
 
     /// Initializes a new Rect with the origin {x,y} and the size {w,h}, converting values from Int to Double
@@ -69,7 +69,7 @@ public struct Rect: Equatable, CustomStringConvertible {
     /// ````
     public init(_ x: Int, _ y: Int, _ w: Int, _ h: Int) {
         origin = Point(x, y)
-        size = Size(w, h)
+        size = LegacySize(w, h)
     }
 
     /// Initializes a new Rect with the origin {o.x,o.y} and the size {s.w,s.h}
@@ -78,7 +78,7 @@ public struct Rect: Equatable, CustomStringConvertible {
     /// let s = Size()
     /// let r = Rect(p,s)
     /// ````
-    public init(_ o: Point, _ s: Size) {
+    public init(_ o: Point, _ s: LegacySize) {
         origin = o
         size = s
     }
@@ -86,7 +86,7 @@ public struct Rect: Equatable, CustomStringConvertible {
     /// Initializes a Rect from a CGRect
     public init(_ rect: CGRect) {
         origin = Point(rect.origin)
-        size = Size(rect.size)
+        size = LegacySize(rect.size)
     }
 
     /// Initializes a rectangle that contains all of the specified coordinates in an array.

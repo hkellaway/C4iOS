@@ -98,7 +98,7 @@ class RectTests: XCTestCase {
         let b = Rect(r(), r(), r() + 1, r() + 1)
         let c = union(a, rect2: b)
         let o = Point(min(a.origin.x, b.origin.x), min(a.origin.y, b.origin.y))
-        let s = Size(max(a.max.x, b.max.x) - o.x, max(a.max.y, b.max.y) - o.y)
+        let s = LegacySize(max(a.max.x, b.max.x) - o.x, max(a.max.y, b.max.y) - o.y)
         let d = Rect(o, s)
         XCTAssertEqual(c, d, "C should be equal to D")
     }
@@ -119,6 +119,6 @@ class RectTests: XCTestCase {
         let x = r()
         let y = r()
         _ = inset(a, dx: x, dy: y)
-        _ = Rect(a.origin, Size(a.size.width - x, a.size.height - y))
+        _ = Rect(a.origin, LegacySize(a.size.width - x, a.size.height - y))
     }
 }

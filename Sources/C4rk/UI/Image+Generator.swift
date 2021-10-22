@@ -39,7 +39,7 @@ extension LegacyImage {
             //Need to output a CGImage that matches the current image's extent, {0, -h, w, h}
             let cgimg = CIContext().createCGImage(self.output, from: outputImage.extent)
             self.imageView.image = UIImage(cgImage: cgimg!)
-            _originalSize = Size(outputImage.extent.size)
+            _originalSize = LegacySize(outputImage.extent.size)
         } else {
             print("Failed to generate outputImage: \(#function)")
         }
