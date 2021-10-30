@@ -32,6 +32,6 @@ import CoreGraphics
 extension ClosedRange {
     
     /// A range between 0 and 1 inclusive.
-    static func betweenOneAndZero() -> ClosedRange<CGFloat> { 0.0...1.0 }
+    static func betweenZeroAndOne() -> ClosedRange<CGFloat> { 0.0...1.0 }
     
 }

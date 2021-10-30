@@ -183,7 +183,7 @@ public class Color: ColorConvertible, CustomStringConvertible, Equatable {
     public convenience init?(red: Double, green: Double, blue: Double, alpha: Double = 1.0) {
         let validRGB: Bool = [red, green, blue]
             .map { CGFloat($0) }
-            .allSatisfy(ClosedRange<CGFloat>.betweenOneAndZero().contains)
+            .allSatisfy(ClosedRange<CGFloat>.betweenZeroAndOne().contains)
         
         guard validRGB && AlphaValue.contains(alpha) else {
             // TODO: Use Logger

@@ -28,4 +28,4 @@
 import CoreGraphics
 
 /// Type representing an HSB value used to compose a color. A value between 0 and 1 inclusive.
-public let HSBValue: ClosedRange<CGFloat> = .betweenOneAndZero()
+public let HSBValue: ClosedRange<CGFloat> = .betweenZeroAndOne()
