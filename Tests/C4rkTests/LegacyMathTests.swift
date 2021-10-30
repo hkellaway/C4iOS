@@ -20,50 +20,50 @@
 import C4rk
 import XCTest
 
-class MathTests: XCTestCase {
+class LegacyMathTests: XCTestCase {
 
     func testLerp() {
         XCTAssert(lerp(0.0, 10.0, at: 0.2) == 2.0, "Value should be interpolated")
     }
 
     func testClampLess() {
-        let testValue = clamp(-1, min: 10, max: 20)
+        let testValue = clamp(-1, range: 10...20)
         let correctValue = 10
         XCTAssertEqual(testValue, correctValue, "Value should be clamped to lower bound")
     }
 
     func testClampNoOp() {
-        let testValue = clamp(11, min: 10, max: 20)
+        let testValue = clamp(11, range: 10...20)
         let correctValue = 11
         XCTAssertEqual(testValue, correctValue, "Value should not be clamped")
     }
 
     func testClampGreater() {
-        let testValue = clamp(21, min: 10, max: 20)
+        let testValue = clamp(21, range: 10...20)
         let correctValue = 20
         XCTAssertEqual(testValue, correctValue, "Value should be clamped to upper bound")
     }
 
     func testMapOpen() {
-        let testValue = map(5, from: 0..<10, to: 0..<20)
+        let testValue = linearMap(5, from: 0..<10, to: 0..<20)
         let correctValue = 10.0
         XCTAssertEqual(testValue, correctValue, "Value should be mapped to the target range")
     }
 
     func testMapClosed() {
-        let testValue = map(5, from: 0...10, to: 0...20)
+        let testValue = linearMap(5, from: 0...10, to: 0...20)
         let correctValue = 10.0
         XCTAssertEqual(testValue, correctValue, "Value should be mapped to the target range")
     }
 
     func testLerpDouble() {
-        let testValue = map(5.0, from: 0.0..<10.0, to: 0.0..<20.0)
+        let testValue = linearMap(5.0, from: 0.0..<10.0, to: 0.0..<20.0)
         let correctValue = 10.0
         XCTAssertEqual(testValue, correctValue, "Double value should be mapped to the target range")
     }
 
     func testLerpInt() {
-        let testValue = map(6, from: 0..<10, to: 0..<20)
+        let testValue = linearMap(6, from: 0..<10, to: 0..<20)
         let correctValue = 12.0
         XCTAssertEqual(testValue, correctValue, "Double value should be mapped to the target range")
     }
